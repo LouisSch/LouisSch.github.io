@@ -7798,7 +7798,7 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Time series now can be considered stationary.</p>
+<p>Time series can now be considered stationary.</p>
 </div>
 </div>
 </div>
@@ -7905,9 +7905,9 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We now use pmdarima to perform automatic arima fitting for parameters. It will stationarize data as we did above, by differencing data. It will also select p and q (resp. number of lags for Auto Regressive part and number of lags for Moving Average part). Finally, it will deal with seasonality. Indeed, we can decompose our time series in three part :</p>
+<p>We now use pmdarima to perform automatic arima fitting for parameters. It will stationarize data as we did above, by differencing data. It will also select p and q (resp. number of lags for Auto Regressive part and number of lags for Moving Average part). Finally, it will deal with seasonality. Indeed, we can decompose our time series in three parts :</p>
 <ul>
-<li>Trend component</li>
+<li>Trend</li>
 <li>Seasonality</li>
 <li>Residuals</li>
 </ul>
@@ -8156,7 +8156,7 @@ Total fit time: 3.187 seconds
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Here diagnostic shows that (in the QQ plot) our residuals are almost distributed like a standard gaussian density, but correlogram show that there are still significant information within residuals, which can be a problem. Let's do a a check on test set to see if model fits well data. To do so, we use a step-wise approach.</p>
+<p>Here diagnostic shows that (in the QQ plot) our residuals are almost distributed like a standard gaussian density, but correlogram show that there are still significant information within residuals, which can be a problem. Let's do a check on test set to see if model fits well data. To do so, we use a step-wise approach.</p>
 </div>
 </div>
 </div>
@@ -8477,7 +8477,7 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>It relies on the same methodology. But here, upper and lower bounds are computed with ATR (Average True Range) which is a technical indicator of the volaility of the prices. ATR is computed using High Price, Low Price and Closing Price.</p>
+<p>It relies on the same methodology. But here, upper and lower bounds are computed with ATR (Average True Range) which is a technical indicator of the volaility of the prices. ATR is computed using High Price, Low Price and Previous Closing Price.</p>
 </div>
 </div>
 </div>
@@ -8530,7 +8530,7 @@ $$</p>
 <li>MACD line</li>
 <li>Signal line</li>
 </ul>
-<p>MACD line is the difference between an exponential small window moving average (here 12 days) and an exponential large window moving average (here 26 days). Signal line is simply an exponential moving average with window size of 9 days. When signal line is below MACD difference signal, it indicates an upward trend. Conversely, when signal line is above MACD difference, it indicates a downward trend.</p>
+<p>MACD line is the difference between an exponential small window moving average (here 12 days) and an exponential large window moving average (here 26 days). Signal line is simply an exponential moving average with window size of 9 days. When signal line is below MACD difference signal, it indicates an upward trend. Conversely, when signal line is above MACD difference line, it indicates a downward trend.</p>
 </div>
 </div>
 </div>
